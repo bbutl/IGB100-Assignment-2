@@ -11,6 +11,8 @@ TagManager:
   - 
   - Water
   - UI
+  - Target
+  - Obstacles
   - 
   - 
   - 
@@ -31,9 +33,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Unselectable
   - 
   - 
   - 
