@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bonsai
+  - Enemy
+  - Bullet
+  - Manager
   layers:
   - Default
   - TransparentFX
@@ -11,8 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Target
-  - Obstacles
+  - whatIsGround
   - 
   - 
   - 
@@ -33,7 +36,8 @@ TagManager:
   - 
   - 
   - 
-  - Unselectable
+  - 
+  - 
   - 
   - 
   - 
