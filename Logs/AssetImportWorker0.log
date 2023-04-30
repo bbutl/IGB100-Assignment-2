@@ -281,3 +281,4 @@ Received Import Request.
   path: Assets/Prefabs/Bonsai.prefab
   artifactKey: Guid(81261663744d36445b2313a8be7b8989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Bonsai.prefab using Guid(81261663744d36445b2313a8be7b8989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e078f96464f1652c878b3e311b1b31b6') in 0.039541 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
