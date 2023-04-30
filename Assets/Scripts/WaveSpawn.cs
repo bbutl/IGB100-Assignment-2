@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WaveSpawn : MonoBehaviour
 {
 
@@ -19,6 +19,8 @@ public class WaveSpawn : MonoBehaviour
     private float spawnInterval;
     private float spawnTimer;
 
+    private int waveMax = 10;
+
     public List<GameObject> spawnedEnemies = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,13 @@ public class WaveSpawn : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(currWave > waveMax)
+        {
+            currWave = 0;
+            SceneManager.LoadScene("Victory");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
         if (spawnTimer <= 0)
         {
             //spawn an enemy
@@ -61,8 +70,14 @@ public class WaveSpawn : MonoBehaviour
 
         if (waveTimer <= 0)
         {
-            currWave++;
-            GenerateWave();
+            
+            
+                currWave++;
+                GenerateWave();
+            
+           
+               
+            
         }
     }
 

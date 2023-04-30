@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Scenes : MonoBehaviour
 {
     public GameObject bonsai;
+    public GameObject waveSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,11 @@ public class Scenes : MonoBehaviour
     }
     public void MoveToScene(string input)
     {
-        SceneManager.LoadScene($"{input}");
+       Health bHealth = bonsai.GetComponent<Health>();
+        bHealth.health = 1000;
         
+        SceneManager.LoadScene($"{input}");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 }
