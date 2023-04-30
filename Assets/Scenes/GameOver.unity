@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3897f03f6812b404dbe8b7fada526d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonsai: {fileID: 0}
+  bonsai: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
 --- !u!114 &442326554
 MonoBehaviour:
   m_ObjectHideFlags: 0
