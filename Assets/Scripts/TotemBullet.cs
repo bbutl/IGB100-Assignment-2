@@ -15,6 +15,10 @@ public class TotemBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+=======
+        Destroy(gameObject, 10f);
+>>>>>>> Blake
         if(target == null)
         {
             Destroy(gameObject);
@@ -35,6 +39,10 @@ public class TotemBullet : MonoBehaviour
     }
     void HitTarget()
     {
+<<<<<<< HEAD
         Debug.Log("HIT");
+=======
+       
+>>>>>>> Blake
     }
 }

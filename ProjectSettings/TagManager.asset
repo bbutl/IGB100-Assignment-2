@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Bullet
   - Manager
+<<<<<<< HEAD
+=======
+  - Ground
+>>>>>>> Blake
   layers:
   - Default
   - TransparentFX

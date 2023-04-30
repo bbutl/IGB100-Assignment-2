@@ -10,7 +10,14 @@ public class Health : Bullet
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         
+=======
+        if (gameObject.tag == "Bonsai")
+        {
+            health = 1500;
+        }
+>>>>>>> Blake
     }
 
     // Update is called once per frame

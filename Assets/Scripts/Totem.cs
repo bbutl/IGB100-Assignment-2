@@ -7,7 +7,11 @@ public class Totem : MonoBehaviour
     private Transform target;
     public float range = 15f;
     
+<<<<<<< HEAD
     public float fireRate = 1f;
+=======
+    public float fireRate = 0.5f;
+>>>>>>> Blake
     private float fireCountDown = 0f;
     Vector3 direction;
     public GameObject bulletPrefab;
@@ -20,6 +24,10 @@ public class Totem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+=======
+        // If there is a target, repeatedly fire based on firerate, otherwise return
+>>>>>>> Blake
         if(target == null)
         {
             return;
@@ -41,6 +49,10 @@ public class Totem : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+<<<<<<< HEAD
+=======
+    // Method that updates the current target based on the enemy that is closest to the totem
+>>>>>>> Blake
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

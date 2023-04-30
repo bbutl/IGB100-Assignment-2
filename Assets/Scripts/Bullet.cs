@@ -16,5 +16,16 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * bulletSpeed * Time.deltaTime;
+<<<<<<< HEAD
+=======
+        Object.Destroy(gameObject, 10f);
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "Ground")
+        {
+            Destroy(this.gameObject);
+        }
+>>>>>>> Blake
     }
 }

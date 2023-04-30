@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+    public float fireRate = .5f;
+    private float nextShot = -1f;
+    private bool canShoot = true;
+    
+>>>>>>> Blake
     private PointManager pointManager;
 
     public GameObject prefab;
@@ -39,12 +46,24 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
         }
+=======
+        if(Time.time > nextShot)
+        {
+            canShoot = true ;
+        }
+        if (Input.GetMouseButton(0) && canShoot == true)
+        {
+            Fire(); 
+        }
+       
+>>>>>>> Blake
         GetInput();
         IsGrounded();
         LimitSpeed();
@@ -56,6 +75,17 @@ public class Controller : MonoBehaviour
 
         MovePlayer();
     }
+<<<<<<< HEAD
+=======
+    private void Fire()
+    {
+            canShoot = false;
+            GameObject bulletObject = Instantiate(bulletPrefab);
+            bulletObject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
+            bulletObject.transform.forward = playerCamera.transform.forward;
+            nextShot = Time.time + fireRate;
+    }
+>>>>>>> Blake
     private void GetInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");

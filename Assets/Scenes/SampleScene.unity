@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+>>>>>>> Blake
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,7 +136,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 35467746}
+<<<<<<< HEAD
   - component: {fileID: 35467745}
+=======
+>>>>>>> Blake
   m_Layer: 0
   m_Name: Spawner (2)
   m_TagString: Untagged
@@ -140,6 +147,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &35467745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +163,8 @@ MonoBehaviour:
   spawnRate: 5
   enemyPrefabs:
   - {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+=======
+>>>>>>> Blake
 --- !u!4 &35467746
 Transform:
   m_ObjectHideFlags: 0
@@ -165,7 +175,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 102.1, y: 57, z: 73.062}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -197,7 +210,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125.375, y: 57.167, z: 0}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -211,12 +227,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 121097941}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 5
   enemyPrefabs:
   - {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 43f21b66d0ec0064ea5ddae189c99bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+    cost: 2
+  currWave: 1
+  enemiesToSpawn: []
+  spawnLocation:
+  - {fileID: 121097942}
+  spawnIndex: 0
+  isActive: 0
+  waveDuration: 30
+  waveTimer: 0
+  spawnedEnemies: []
+>>>>>>> Blake
 --- !u!1 &163105711
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +275,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163105711}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
@@ -259,7 +297,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -26.1, y: 57.167, z: -96.1}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -293,7 +334,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 2145175176}
   m_RootOrder: 1
@@ -414,6 +458,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251508962}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+--- !u!1 &260429878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260429879}
+  - component: {fileID: 260429881}
+  - component: {fileID: 260429880}
+  m_Layer: 5
+  m_Name: Crosshair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &260429879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260429878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2145175176}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &260429880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260429878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16318086, g: 0.1689914, b: 0.1792453, a: 0.33333334}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &260429881
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260429878}
+  m_CullTransparentMesh: 1
+>>>>>>> Blake
 --- !u!1 &263643698
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_SendPointerHoverToParent: 1
+=======
+>>>>>>> Blake
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -477,11 +602,166 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &340383157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340383158}
+  - component: {fileID: 340383161}
+  - component: {fileID: 340383160}
+  - component: {fileID: 340383159}
+  m_Layer: 5
+  m_Name: Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &340383158
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340383157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2145175176}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -850, y: 375}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &340383159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340383157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e73c2b973548449539ad89de4ecc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTextElement: {fileID: 340383160}
+  go: {fileID: 1566323457}
+--- !u!114 &340383160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340383157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -563.45154, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &340383161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340383157}
+  m_CullTransparentMesh: 1
+>>>>>>> Blake
 --- !u!1 &405599745
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,12 +788,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 405599745}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 5
   enemyPrefabs:
   - {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 43f21b66d0ec0064ea5ddae189c99bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+    cost: 2
+  currWave: 1
+  enemiesToSpawn: []
+  spawnLocation:
+  - {fileID: 405599747}
+  spawnIndex: 0
+  isActive: 0
+  waveDuration: 30
+  waveTimer: 0
+  spawnedEnemies: []
+>>>>>>> Blake
 --- !u!4 &405599747
 Transform:
   m_ObjectHideFlags: 0
@@ -524,7 +822,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 53.62, y: 57.167, z: -94.8}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -555,7 +856,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 877088575}
   m_RootOrder: 0
@@ -586,7 +890,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.09, z: 2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 756763801}
   m_RootOrder: 0
@@ -622,7 +929,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 877088575}
   m_RootOrder: 1
@@ -716,7 +1026,10 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -745,7 +1058,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712779208}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
@@ -763,7 +1080,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 70.6, y: 57.167, z: 90.4}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -794,7 +1114,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 59.750004, z: 10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children:
   - {fileID: 585853854}
   m_Father: {fileID: 0}
@@ -826,12 +1149,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 839037948}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 5
   enemyPrefabs:
   - {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 43f21b66d0ec0064ea5ddae189c99bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+    cost: 2
+  currWave: 1
+  enemiesToSpawn: []
+  spawnLocation:
+  - {fileID: 839037950}
+  spawnIndex: 0
+  isActive: 0
+  waveDuration: 30
+  waveTimer: 0
+  spawnedEnemies: []
+>>>>>>> Blake
 --- !u!4 &839037950
 Transform:
   m_ObjectHideFlags: 0
@@ -842,7 +1183,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.9, y: 57.167, z: 110.8}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -877,9 +1221,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877088574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 32, y: 58.5, z: 22.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+=======
+  m_LocalPosition: {x: -77.2, y: 58.5, z: 22.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> Blake
   m_Children:
   - {fileID: 565462351}
   - {fileID: 614645593}
@@ -941,7 +1290,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< HEAD
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Blake
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -992,6 +1344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d500ba6a0d998bd429b69010548a73fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  fireRate: 0.5
+>>>>>>> Blake
   prefab: {fileID: 4663602059869507323, guid: bdcb5fc92b6906f4d8b4c939e34b9a72, type: 3}
   moveSpeed: 10
   orientation: {fileID: 565462351}
@@ -1030,7 +1386,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928689878}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
@@ -1048,7 +1408,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -66.17, y: 57.167, z: 90.4}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -1133,7 +1496,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children:
   - {fileID: 2145175176}
   m_Father: {fileID: 1063592191}
@@ -1194,7 +1560,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 59.750004, z: 9.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
@@ -1224,13 +1593,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327322224}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 766781fbd3e13494196aed131f758b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 585853853}
+<<<<<<< HEAD
   structure: {fileID: 756763800}
+=======
+  structure: {fileID: 0}
+>>>>>>> Blake
   gridSize: 1
 --- !u!4 &1327322226
 Transform:
@@ -1242,7 +1619,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 64.61, z: 9.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1276,7 +1656,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 2145175176}
   m_RootOrder: 0
@@ -1396,12 +1779,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTextElement: {fileID: 1335097932}
+<<<<<<< HEAD
   go: {fileID: 1835786427628723895, guid: 9db0a46851c273441acc367b6b333565, type: 3}
 --- !u!4 &1468881180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1835786427628723888, guid: 9db0a46851c273441acc367b6b333565, type: 3}
   m_PrefabInstance: {fileID: 1835786428895086508}
   m_PrefabAsset: {fileID: 0}
+=======
+  go: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+>>>>>>> Blake
 --- !u!1 &1478574488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1804,11 @@ GameObject:
   - component: {fileID: 1478574489}
   m_Layer: 6
   m_Name: Ground
+<<<<<<< HEAD
   m_TagString: Untagged
+=======
+  m_TagString: Ground
+>>>>>>> Blake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1463,7 +1854,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< HEAD
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Blake
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1512,17 +1906,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.8, z: 0}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1468881180}
+=======
+  m_Children: []
+>>>>>>> Blake
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566323457
 GameObject:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+=======
+  m_CorrespondingSourceObject: {fileID: 3553444193488283771, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+  m_PrefabInstance: {fileID: 3553444192906058618}
+>>>>>>> Blake
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -1538,12 +1941,18 @@ GameObject:
 --- !u!114 &1566323458
 MonoBehaviour:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+=======
+  m_CorrespondingSourceObject: {fileID: 3553444193488283768, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+  m_PrefabInstance: {fileID: 3553444192906058618}
+>>>>>>> Blake
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566323457}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1555,16 +1964,88 @@ Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+=======
+  m_Script: {fileID: 11500000, guid: 43f21b66d0ec0064ea5ddae189c99bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyPrefab: {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
+    cost: 2
+  currWave: 1
+  enemiesToSpawn: []
+  spawnLocation:
+  - {fileID: 1566323459}
+  spawnIndex: 0
+  isActive: 0
+  waveDuration: 30
+  waveTimer: 0
+  spawnedEnemies: []
+--- !u!4 &1566323459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+  m_PrefabInstance: {fileID: 3553444192906058618}
+>>>>>>> Blake
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566323457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -118.79, y: 57.167, z: 0}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &1566751402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566751404}
+  - component: {fileID: 1566751403}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1566751403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566751402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3897f03f6812b404dbe8b7fada526d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonsai: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+--- !u!4 &1566751404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566751402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.85565, y: 0.39671326, z: -40.19832}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Blake
 --- !u!1 &1688540787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +2070,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688540787}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
@@ -1607,7 +2092,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -93.6, y: 57.167, z: -54.4}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -1636,7 +2124,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856266404}
+<<<<<<< HEAD
   m_Enabled: 1
+=======
+  m_Enabled: 0
+>>>>>>> Blake
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7eed5173b1c3af44a3ef72fc980c23a, type: 3}
   m_Name: 
@@ -1654,7 +2146,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -96.2, y: 57.167, z: 58.8}
   m_LocalScale: {x: 250, y: 50, z: 250}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -1749,10 +2244,18 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1335097931}
   - {fileID: 251508963}
+=======
+  m_Children:
+  - {fileID: 1335097931}
+  - {fileID: 251508963}
+  - {fileID: 340383158}
+  - {fileID: 260429879}
+>>>>>>> Blake
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1761,11 +2264,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!1001 &1835786428895086508
+=======
+--- !u!1001 &3553444192906058618
+>>>>>>> Blake
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1478574494}
     m_Modifications:
     - target: {fileID: 1835786427628723853, guid: 9db0a46851c273441acc367b6b333565, type: 3}
@@ -1822,6 +2330,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db0a46851c273441acc367b6b333565, type: 3}
+=======
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3553444193488283768, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: waveDuration
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -118.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 57.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553444193488283771, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+      propertyPath: m_Name
+      value: Spawner (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
+>>>>>>> Blake
 --- !u!1001 &8571833151475014363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1829,6 +2395,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+=======
+    - target: {fileID: 8571833151004995776, guid: 13239d3555db90849bd23297438e1661, type: 3}
+      propertyPath: bonsai
+      value: 
+      objectReference: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+    - target: {fileID: 8571833151004995776, guid: 13239d3555db90849bd23297438e1661, type: 3}
+      propertyPath: points
+      value: 50
+      objectReference: {fileID: 0}
+>>>>>>> Blake
     - target: {fileID: 8571833151004995777, guid: 13239d3555db90849bd23297438e1661, type: 3}
       propertyPath: m_RootOrder
       value: 1

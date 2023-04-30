@@ -32,7 +32,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.1, y: 59.07, z: 38}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Blake
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +59,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< HEAD
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Blake
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -113,14 +119,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65b0568ea0714b499ff05928b2dbc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   bulletSpeed: 4
+=======
+  bulletSpeed: 5
+>>>>>>> Blake
   bulletDmg: 50
   health: 100
   damage: 25
   enemyHealth: {fileID: 9073061012968796876}
+<<<<<<< HEAD
   bonsaiHealth: {fileID: 1835786427628723853, guid: 9db0a46851c273441acc367b6b333565, type: 3}
   thisObject: {fileID: 9073061012968796882}
   target: {fileID: 1835786427628723895, guid: 9db0a46851c273441acc367b6b333565, type: 3}
+=======
+  bonsaiHealth: {fileID: 2344875545325481030, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+  thisObject: {fileID: 9073061012968796882}
+  target: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+>>>>>>> Blake
   speed: 5
   delay: 3
   pdelay: 0.05
