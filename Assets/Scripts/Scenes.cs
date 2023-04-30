@@ -19,11 +19,15 @@ public class Scenes : MonoBehaviour
         if (bHealth.health <= 0)
         {
             SceneManager.LoadScene("GameOver");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            bHealth.health = 1000;
         }
         
     }
     public void MoveToScene(string input)
     {
         SceneManager.LoadScene($"{input}");
+        
     }
 }
