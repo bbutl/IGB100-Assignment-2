@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - Ground
+  - Enemy
+  - Bullet
+  - Bonsai
+  - Manager
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -11,8 +20,14 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< Updated upstream
   - Target
   - Obstacles
+=======
+  - 
+  - Ground
+  - 
+>>>>>>> Stashed changes
   - 
   - 
   - 
