@@ -19,7 +19,7 @@ public class HealingTotem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (waveSpawn.waveTimer < 1 && complete == false)
+        if (waveSpawn.waveTimer < 30 && complete == false)
         {
             StartCoroutine(Heal());
         }
