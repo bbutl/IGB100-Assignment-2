@@ -151,7 +151,7 @@ Transform:
   m_LocalScale: {x: 250, y: 50, z: 250}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121097941
 GameObject:
@@ -1213,6 +1213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.5
   prefab: {fileID: 4663602059869507323, guid: bdcb5fc92b6906f4d8b4c939e34b9a72, type: 3}
+  slow: {fileID: 0}
   moveSpeed: 10
   orientation: {fileID: 565462351}
   jumpKey: 32
@@ -1725,61 +1726,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1566323457
+--- !u!1 &1566323457 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3553444193488283771, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
   m_PrefabInstance: {fileID: 3553444192906058618}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1566323459}
-  - component: {fileID: 1566323458}
-  m_Layer: 0
-  m_Name: Spawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1566323458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3553444193488283768, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
-  m_PrefabInstance: {fileID: 3553444192906058618}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566323457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f21b66d0ec0064ea5ddae189c99bbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - enemyPrefab: {fileID: 9073061012968796882, guid: d24d87984fac7b2408a2bd6e7d7ee4c4, type: 3}
-    cost: 2
-  currWave: 1
-  enemiesToSpawn: []
-  spawnLocation:
-  - {fileID: 1566323459}
-  spawnIndex: 0
-  isActive: 0
-  waveDuration: 30
-  waveTimer: 0
-  spawnedEnemies: []
---- !u!4 &1566323459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3553444193488283769, guid: 1c53356929bb04541a3f0afa3114a49f, type: 3}
-  m_PrefabInstance: {fileID: 3553444192906058618}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566323457}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -118.79, y: 57.167, z: 0}
-  m_LocalScale: {x: 250, y: 50, z: 250}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566751402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonsai: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+  waveSpawn: {fileID: 0}
 --- !u!4 &1566751404
 Transform:
   m_ObjectHideFlags: 0

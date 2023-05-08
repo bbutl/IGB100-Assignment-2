@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Manager
   - Ground
+  - SlowBullet
   layers:
   - Default
   - TransparentFX

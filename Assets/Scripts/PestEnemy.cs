@@ -11,8 +11,10 @@ public class PestEnemy : Health
     public GameObject target;
     public float speed;
     Rigidbody rb;
+    public float slowDuration = -1f;
+    private bool isSlowed = false;
     public float delay = 0.2f;
-    public float pdelay = 0.05f;
+
     float timer;
 
 
@@ -21,6 +23,7 @@ public class PestEnemy : Health
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        PestEnemy enemy = GetComponent<PestEnemy>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,14 @@ public class PestEnemy : Health
     {
         // Move towards Bonsai Tree
         thisObject.transform.position = Vector3.MoveTowards(thisObject.transform.position, target.transform.position, (speed * Time.deltaTime));
+        if (Time.time > slowDuration)
+        {
+            isSlowed = true;
+        }
+        if (speed < 1.5f)
+        {
+            speed = 1.5f;
+        }
     }
     // On Collision with Bonsai, enemy will deal damage at a set interval based on delay
     private void OnCollisionStay(Collision collision)
@@ -35,31 +46,33 @@ public class PestEnemy : Health
 
         if (collision.gameObject.tag == "Bonsai")
         {
-            
+
             timer += Time.deltaTime;
             if (timer > delay)
             {
-                
+
                 bonsaiHealth.TakeDamage(damage);
                 timer -= delay;
             }
-            
+
 
 
         }
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        // Take damage when enemy is hit by damaging projectile
+        if (collision.gameObject.tag == "Bullet")
         {
-
-            Destroy(collision.gameObject);
             TakeDamage(bulletDmg);
         }
-    }
-    IEnumerator AttackSpeed()
-    {
-        yield return new WaitForSeconds(3);
-        bonsaiHealth.TakeDamage(damage);
+        // Slow enemy when hit by slowing projectile
+        if (collision.gameObject.tag == "SlowBullet")
+        {
+            this.speed = speed - (speed * 0.2f);
+        }
+        Destroy(collision.gameObject);
     }
 }
+    
+    

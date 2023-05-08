@@ -10,8 +10,8 @@ public class Controller : MonoBehaviour
     
     private PointManager pointManager;
 
-    public GameObject prefab;
-
+    public GameObject[] prefab;
+    
     public float moveSpeed;
     public Transform orientation;
     float horizontalInput;
@@ -36,6 +36,7 @@ public class Controller : MonoBehaviour
     
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -133,11 +134,35 @@ public class Controller : MonoBehaviour
     private void Place()
     {
         pointManager = GameObject.Find("GameManager").GetComponent<PointManager>();
-        if (Input.GetKeyDown(KeyCode.E) && pointManager.points >= 50)
+        var input = Input.inputString;
+        switch (input)
         {
-            pointManager.points -= 50;
-            Instantiate(prefab, transform.position + (transform.forward * 2), transform.rotation);
+            // Instantiate Regular Totem
+            case "1":
+                if (pointManager.points >= 50)
+                {
+                    pointManager.points -= 50;
+                    Instantiate(prefab[0], transform.position + (transform.forward * 2), transform.rotation);
+                }
+                break;
+            // Instantiate Slowing Totem
+                case "2":
+                if (pointManager.points >= 25)
+                {
+                    pointManager.points -= 25;
+                    Instantiate(prefab[1], transform.position + (transform.forward * 2), transform.rotation);
+                }
+                break;
+            // Instantiate Healing Totem
+            case "3":
+                if (pointManager.points >= 100)
+                {
+                    pointManager.points -= 100;
+                    Instantiate(prefab[2], transform.position + (transform.forward * 2), transform.rotation);
+                }
+                break;
         }
+        
     }
     
 }
