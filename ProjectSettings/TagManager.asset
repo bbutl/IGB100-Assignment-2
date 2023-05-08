@@ -10,6 +10,7 @@ TagManager:
   - Manager
   - Ground
   - SlowBullet
+  - Spawner
   layers:
   - Default
   - TransparentFX

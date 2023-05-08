@@ -128,5 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 0
   bulletDmg: 0
-  health: 1000
+  health: 0
   damage: 0

@@ -12,14 +12,14 @@ public class HealingTotem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        waveSpawn = GameObject.FindGameObjectWithTag("Spawner").GetComponent<WaveSpawn>();
         
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (waveSpawn.waveTimer < 30 && complete == false)
+        if (waveSpawn.waveTimer < 1 && complete == false)
         {
             StartCoroutine(Heal());
         }

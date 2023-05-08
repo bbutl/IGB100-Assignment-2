@@ -111,6 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totemHealth: {fileID: 0}
   bonsaiHealth: {fileID: 2344875545325481030, guid: 81261663744d36445b2313a8be7b8989, type: 3}
-  waveSpawn: {fileID: 6723274821240097926, guid: 48937ed5e1caa144d998861e4fdb432c, type: 3}
+  waveSpawn: {fileID: 0}
   healingAmount: 50
   complete: 0
