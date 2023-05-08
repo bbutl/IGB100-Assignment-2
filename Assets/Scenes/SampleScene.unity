@@ -1212,8 +1212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0.5
-  prefab: {fileID: 4663602059869507323, guid: bdcb5fc92b6906f4d8b4c939e34b9a72, type: 3}
-  slow: {fileID: 0}
+  prefab:
+  - {fileID: 4663602059869507323, guid: bdcb5fc92b6906f4d8b4c939e34b9a72, type: 3}
+  - {fileID: 6237268150417533539, guid: e5d71b2ea0fa4b249989df147a0f1675, type: 3}
+  - {fileID: 4301390627487254305, guid: b99ac1715a21b0841b5525e70f404dfc, type: 3}
   moveSpeed: 10
   orientation: {fileID: 565462351}
   jumpKey: 32
@@ -2045,7 +2047,7 @@ PrefabInstance:
       objectReference: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
     - target: {fileID: 8571833151004995776, guid: 13239d3555db90849bd23297438e1661, type: 3}
       propertyPath: points
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8571833151004995777, guid: 13239d3555db90849bd23297438e1661, type: 3}
       propertyPath: m_RootOrder
