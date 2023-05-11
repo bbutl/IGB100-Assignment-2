@@ -16,8 +16,6 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * bulletSpeed * Time.deltaTime;
-<<<<<<< Updated upstream
-=======
         Object.Destroy(gameObject, 10f);
     }
     private void OnTriggerEnter(Collider collision)
@@ -26,6 +24,5 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
->>>>>>> Stashed changes
     }
 }

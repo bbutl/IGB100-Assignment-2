@@ -19,11 +19,11 @@ public class Controller : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
 
-    public KeyCode jumpKey = KeyCode.Space;
-    public float jumpForce;
-    public float jumpCooldown;
+    // public KeyCode jumpKey = KeyCode.Space;
+    // public float jumpForce;
+    // public float jumpCooldown;
     public float airMulitplier;
-    bool readyToJump = true;
+    // bool readyToJump = true;
     // Ground check parameters
 
     public float playerHeight;
@@ -120,16 +120,16 @@ public class Controller : MonoBehaviour
             rb.drag = 0;
         }
     }
-    private void Jump()
-    {
-        // Reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    private void ResetJump()
-    {
-        readyToJump = true;
-    }
+    // private void Jump()
+    // {
+    //     // Reset y velocity
+    //     rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    //     rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    // }
+    // private void ResetJump()
+    // {
+    //     readyToJump = true;
+    // }
     private void Place()
     {
         pointManager = GameObject.Find("GameManager").GetComponent<PointManager>();
