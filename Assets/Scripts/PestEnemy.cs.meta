@@ -3,7 +3,11 @@ guid: a65b0568ea0714b499ff05928b2dbc33
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyHealth: {instanceID: 0}
+  - bonsaiHealth: {instanceID: 0}
+  - thisObject: {fileID: 6814143042219081994, guid: 95143f7ee4d6b784990b6916d4a70b12, type: 3}
+  - target: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -69,10 +69,9 @@ public class PestEnemy : Health
         // Slow enemy when hit by slowing projectile
         if (collision.gameObject.tag == "SlowBullet")
         {
-            this.speed = speed - (speed * 0.2f);
+            this.speed = speed - (speed * 0.3f);
         }
         Destroy(collision.gameObject);
     }
 }
-    
-    
+

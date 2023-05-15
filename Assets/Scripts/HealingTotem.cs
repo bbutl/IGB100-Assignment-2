@@ -19,6 +19,7 @@ public class HealingTotem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // Once waveTimer reaches zero, heal the bonsai
         if (waveSpawn.waveTimer < 1 && complete == false)
         {
             StartCoroutine(Heal());

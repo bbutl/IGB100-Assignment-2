@@ -6,7 +6,7 @@ public class Totem : MonoBehaviour
 {
     private Transform target;
     public float range = 15f;
-    
+
     public float fireRate = 0.5f;
     private float fireCountDown = 0f;
     Vector3 direction;
@@ -21,12 +21,12 @@ public class Totem : MonoBehaviour
     void Update()
     {
         // If there is a target, repeatedly fire based on firerate, otherwise return
-        if(target == null)
+        if (target == null)
         {
             return;
         }
 
-        
+
 
 
 
@@ -57,7 +57,7 @@ public class Totem : MonoBehaviour
                 neareastEnemy = enemy;
             }
         }
-        if(neareastEnemy != null && shortestDistance <= range)
+        if (neareastEnemy != null && shortestDistance <= range)
         {
             target = neareastEnemy.transform;
         }
@@ -68,9 +68,9 @@ public class Totem : MonoBehaviour
     }
     void Shoot()
     {
-       GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         TotemBullet bullet = bulletGO.GetComponent<TotemBullet>();
-        if(bullet != null)
+        if (bullet != null)
         {
             bullet.Seek(target);
         }

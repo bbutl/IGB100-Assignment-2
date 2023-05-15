@@ -4,13 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Ground
   - Bonsai
   - Enemy
   - Bullet
+  - Fire
   - Manager
-  - Ground
-  - SlowBullet
   - Spawner
+  - SlowBullet
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - whatIsGround
+  - 
   - 
   - 
   - 
