@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class PestEnemy : Health
 {
+    public NavMeshAgent agent;
 
     public Health enemyHealth;
     public Health bonsaiHealth;

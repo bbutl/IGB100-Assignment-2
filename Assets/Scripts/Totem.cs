@@ -6,7 +6,7 @@ public class Totem : MonoBehaviour
 {
     private Transform target;
     public float range = 15f;
-
+    
     public float fireRate = 0.5f;
     private float fireCountDown = 0f;
     Vector3 direction;

@@ -122,6 +122,14 @@ public class WaveSpawn : MonoBehaviour
         enemiesToSpawn = generatedEnemies;
     }
 
+    public void Gen()
+    {
+        List<GameObject> generatedEnemies = new List<GameObject>();
+        while(waveValue > 0)
+        {
+
+        }
+    }
 }
 
 [System.Serializable]
