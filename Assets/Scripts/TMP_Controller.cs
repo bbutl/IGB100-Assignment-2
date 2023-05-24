@@ -9,7 +9,8 @@ public class TMP_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       var h = go.GetComponent<Health>();
+        myTextElement.text = $"Health:{h.health.ToString()}";
         
     }
 
@@ -17,7 +18,7 @@ public class TMP_Controller : MonoBehaviour
     void Update()
     {
         var h = go.GetComponent<Health>();
-        myTextElement.text = $"Bonsai Health:{h.health.ToString()}";
+        myTextElement.text = $"Health:{h.health.ToString()}";
        
     }
 }

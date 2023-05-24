@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class WaveSpawn : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class WaveSpawn : MonoBehaviour
     private float spawnInterval;
     private float spawnTimer;
 
-    private int waveMax = 10;
+    private int waveMax = 3;
 
     public List<GameObject> spawnedEnemies = new List<GameObject>();
     // Start is called before the first frame update
@@ -79,6 +80,8 @@ public class WaveSpawn : MonoBehaviour
                
             
         }
+        Debug.Log("counting down" + waveTimer.ToString());
+        Debug.Log("from" + waveDuration.ToString());
     }
 
     public void GenerateWave()
@@ -88,6 +91,7 @@ public class WaveSpawn : MonoBehaviour
 
         spawnInterval = waveDuration / enemiesToSpawn.Count; // gives a fixed time between each enemies
         waveTimer = waveDuration; // wave duration is read only
+        
     }
 
     public void GenerateEnemies()

@@ -9,15 +9,13 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += transform.forward * bulletSpeed * Time.deltaTime;
-<<<<<<< HEAD
-=======
         Object.Destroy(gameObject, 10f);
     }
     private void OnTriggerEnter(Collider collision)
@@ -26,6 +24,5 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
->>>>>>> Blake
     }
 }

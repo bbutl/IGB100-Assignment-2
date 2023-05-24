@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     public float fireRate = .5f;
     private float nextShot = -1f;
     private bool canShoot = true;
     
->>>>>>> Blake
     private PointManager pointManager;
 
     public GameObject prefab;
@@ -22,11 +19,11 @@ public class Controller : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
 
-    public KeyCode jumpKey = KeyCode.Space;
-    public float jumpForce;
-    public float jumpCooldown;
+    // public KeyCode jumpKey = KeyCode.Space;
+    // public float jumpForce;
+    // public float jumpCooldown;
     public float airMulitplier;
-    bool readyToJump = true;
+    // bool readyToJump = true;
     // Ground check parameters
 
     public float playerHeight;
@@ -46,14 +43,6 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject bulletObject = Instantiate(bulletPrefab);
-            bulletObject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
-            bulletObject.transform.forward = playerCamera.transform.forward;
-        }
-=======
         if(Time.time > nextShot)
         {
             canShoot = true ;
@@ -63,7 +52,6 @@ public class Controller : MonoBehaviour
             Fire(); 
         }
        
->>>>>>> Blake
         GetInput();
         IsGrounded();
         LimitSpeed();
@@ -75,8 +63,6 @@ public class Controller : MonoBehaviour
 
         MovePlayer();
     }
-<<<<<<< HEAD
-=======
     private void Fire()
     {
             canShoot = false;
@@ -85,7 +71,6 @@ public class Controller : MonoBehaviour
             bulletObject.transform.forward = playerCamera.transform.forward;
             nextShot = Time.time + fireRate;
     }
->>>>>>> Blake
     private void GetInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -135,16 +120,16 @@ public class Controller : MonoBehaviour
             rb.drag = 0;
         }
     }
-    private void Jump()
-    {
-        // Reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    private void ResetJump()
-    {
-        readyToJump = true;
-    }
+    // private void Jump()
+    // {
+    //     // Reset y velocity
+    //     rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    //     rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    // }
+    // private void ResetJump()
+    // {
+    //     readyToJump = true;
+    // }
     private void Place()
     {
         pointManager = GameObject.Find("GameManager").GetComponent<PointManager>();

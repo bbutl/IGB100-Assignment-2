@@ -28,6 +28,20 @@ public class PestEnemy : Health
     {
         // Move towards Bonsai Tree
         thisObject.transform.position = Vector3.MoveTowards(thisObject.transform.position, target.transform.position, (speed * Time.deltaTime));
+
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = (target.transform.position - transform.position).normalized;
+
+        // The step size is equal to speed times frame time.
+        float singleStep = speed * Time.deltaTime;
+
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        // Rotate towards target
+        Quaternion newRotation = Quaternion.LookRotation(newDirection);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * speed);
     }
     // On Collision with Bonsai, enemy will deal damage at a set interval based on delay
     private void OnCollisionStay(Collision collision)
