@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+
 public class PestEnemy : Health
 {
-    public NavMeshAgent agent;
 
     public Health enemyHealth;
     public Health bonsaiHealth;
@@ -12,34 +11,43 @@ public class PestEnemy : Health
     public GameObject target;
     public float speed;
     Rigidbody rb;
-    public float slowDuration = -1f;
-    private bool isSlowed = false;
     public float delay = 0.2f;
-
+    public float pdelay = 0.05f;
     float timer;
-
-
+    private float fixedRotation = 0f;
+    Transform r;
+    private bool treeContact = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        PestEnemy enemy = GetComponent<PestEnemy>();
+        r = transform;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Move towards Bonsai Tree
-        thisObject.transform.position = Vector3.MoveTowards(thisObject.transform.position, target.transform.position, (speed * Time.deltaTime));
-        if (Time.time > slowDuration)
+        //Fix the X rotation to prevent enemies from tilting upwards
+        r.eulerAngles = new Vector3 (fixedRotation, r.eulerAngles.y, r.eulerAngles.z);
+        //If not already in contact with Bonsai Tree, move towards it
+        if (treeContact == false)
         {
-            isSlowed = true;
+            thisObject.transform.position = Vector3.MoveTowards(thisObject.transform.position, target.transform.position, (speed * Time.deltaTime));
         }
-        if (speed < 1.5f)
-        {
-            speed = 1.5f;
-        }
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = (target.transform.position - transform.position).normalized;
+
+        // The step size is equal to speed times frame time.
+        float singleStep = speed * Time.deltaTime;
+
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        // Rotate towards target
+        Quaternion newRotation = Quaternion.LookRotation(newDirection);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * speed);
     }
     // On Collision with Bonsai, enemy will deal damage at a set interval based on delay
     private void OnCollisionStay(Collision collision)
@@ -47,32 +55,35 @@ public class PestEnemy : Health
 
         if (collision.gameObject.tag == "Bonsai")
         {
-
+            treeContact = true;
             timer += Time.deltaTime;
             if (timer > delay)
             {
-
+                
                 bonsaiHealth.TakeDamage(damage);
                 timer -= delay;
             }
+            
 
 
-
+        }
+        else
+        {
+            treeContact = false;
         }
     }
     private void OnTriggerEnter(Collider collision)
     {
-        // Take damage when enemy is hit by damaging projectile
-        if (collision.gameObject.tag == "Bullet")
+        if(collision.gameObject.tag == "Bullet")
         {
+
+            Destroy(collision.gameObject);
             TakeDamage(bulletDmg);
         }
-        // Slow enemy when hit by slowing projectile
-        if (collision.gameObject.tag == "SlowBullet")
-        {
-            this.speed = speed - (speed * 0.3f);
-        }
-        Destroy(collision.gameObject);
+    }
+    IEnumerator AttackSpeed()
+    {
+        yield return new WaitForSeconds(3);
+        bonsaiHealth.TakeDamage(damage);
     }
 }
-

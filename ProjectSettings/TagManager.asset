@@ -12,6 +12,7 @@ TagManager:
   - Manager
   - Spawner
   - SlowBullet
+  - Poison
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Ground
   - 
   - 
   - 

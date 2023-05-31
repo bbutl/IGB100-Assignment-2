@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6814143042219082005}
   - component: {fileID: 6814143042219082004}
   - component: {fileID: 6814143042219081995}
-  - component: {fileID: 3822070079704312005}
   - component: {fileID: 6814143042219082001}
   m_Layer: 0
   m_Name: Enemy 1
@@ -33,7 +32,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.1, y: 59.07, z: 38}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +55,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -116,16 +113,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 8
   bulletDmg: 50
+  pointManager: {fileID: 0}
   health: 100
   damage: 25
-  agent: {fileID: 3822070079704312005}
   enemyHealth: {fileID: 6814143042219082004}
   bonsaiHealth: {fileID: 0}
   thisObject: {fileID: 6814143042219081994}
-  target: {fileID: 2344875545325481084, guid: 81261663744d36445b2313a8be7b8989, type: 3}
+  target: {fileID: 0}
   speed: 5
-  slowDuration: -1
   delay: 3
+  pdelay: 0.05
 --- !u!54 &6814143042219081995
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,28 +139,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!195 &3822070079704312005
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6814143042219081994}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &6814143042219082001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,5 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 8
   bulletDmg: 50
+  pointManager: {fileID: 0}
   health: 100
   damage: 25

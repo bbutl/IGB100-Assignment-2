@@ -16,6 +16,6 @@ public class PointText : MonoBehaviour
     void Update()
     {
         var p = go.GetComponent<PointManager>();
-        myTextElement.text = $"Points:{p.points.ToString()}";
+        myTextElement.text = $"{p.points.ToString()}";
     }
 }

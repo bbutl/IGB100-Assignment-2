@@ -10,7 +10,7 @@ public class Controller : MonoBehaviour
     
     private PointManager pointManager;
 
-    public GameObject[] prefab;
+    public GameObject prefab;
 
     public float moveSpeed;
     public Transform orientation;
@@ -19,12 +19,11 @@ public class Controller : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
 
-    Transform t;
-    public KeyCode jumpKey = KeyCode.Space;
-    public float jumpForce;
-    public float jumpCooldown;
+    // public KeyCode jumpKey = KeyCode.Space;
+    // public float jumpForce;
+    // public float jumpCooldown;
     public float airMulitplier;
-    bool readyToJump = true;
+    // bool readyToJump = true;
     // Ground check parameters
 
     public float playerHeight;
@@ -121,84 +120,24 @@ public class Controller : MonoBehaviour
             rb.drag = 0;
         }
     }
-    private void Jump()
-    {
-        // Reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    private void ResetJump()
-    {
-        readyToJump = true;
-    }
+    // private void Jump()
+    // {
+    //     // Reset y velocity
+    //     rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    //     rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    // }
+    // private void ResetJump()
+    // {
+    //     readyToJump = true;
+    // }
     private void Place()
     {
         pointManager = GameObject.Find("GameManager").GetComponent<PointManager>();
-        var input = Input.inputString;
-        Vector3 down = new Vector3(0, -1.25f, 0);
-        if (CollideTag() != "Ground")
+        if (Input.GetKeyDown(KeyCode.E) && pointManager.points >= 50)
         {
-            return;
-        }
-        else
-        {
-            switch (input)
-            {
-
-                // Instantiate Regular Totem
-                case "1":
-                    if (pointManager.points >= 50)
-                    {
-                        pointManager.points -= 50;
-                        Instantiate(prefab[0], MousePos() + Vector3.up, Quaternion.identity);
-                    }
-                    break;
-                // Instantiate Slowing Totem
-                case "2":
-                    if (pointManager.points >= 25)
-                    {
-                        pointManager.points -= 25;
-                        Instantiate(prefab[1], MousePos() + (Vector3.down * 0.5f), Quaternion.identity);
-
-                    }
-                    break;
-                // Instantiate Healing Totem
-                case "3":
-                    if (pointManager.points >= 100)
-                    {
-                        pointManager.points -= 100;
-                        Instantiate(prefab[2], MousePos() + (Vector3.up * 0.6f), Quaternion.identity);
-                    }
-                    break;
-            }
+            pointManager.points -= 50;
+            Instantiate(prefab, transform.position + (transform.forward * 2), transform.rotation);
         }
     }
-    public Vector3 MousePos()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-        RaycastHit hitInfo;
-        Vector3 v = new Vector3();
-        if (Physics.Raycast(ray, out hitInfo))
-        {
-            
-            v = hitInfo.point;
-            
-            
-        }
-        return v;
-    }
-    private string CollideTag()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        string c;
-        RaycastHit hitInfo;
-        if (Physics.Raycast(ray, out hitInfo))
-        {
-            c = hitInfo.collider.tag;
-            return c;
-        }
-       return null;
-        }
-}
     
+}

@@ -5,14 +5,17 @@ using UnityEngine;
 public class Health : Bullet
 {
     private PointManager pointManager;
+
+    //public HealthBar hBar;
     public float health;
+    public float maxHealth = 1500;
     public float damage;
     // Start is called before the first frame update
     void Start()
     {
         if (gameObject.tag == "Bonsai")
         {
-            health = 1500;
+            health = maxHealth;
         }
     }
 
@@ -25,6 +28,7 @@ public class Health : Bullet
     {
         pointManager = GameObject.Find("GameManager").GetComponent<PointManager>();
         health -= amount;
+        //hBar.UpdateHealthBar();
         if(health <= 0)
         {
             Destroy(gameObject);
