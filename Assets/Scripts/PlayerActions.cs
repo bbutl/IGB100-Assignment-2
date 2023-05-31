@@ -64,10 +64,10 @@ public class PlayerActions : MonoBehaviour
                     if (pointManager.points >= 50)
                     {
                         pointManager.points -= 50;
-                        Instantiate(prefab[0], MousePos() + Vector3.up, Quaternion.identity);
+                        Instantiate(prefab[0], MousePos() + (Vector3.up * 1.5f), Quaternion.identity);
                     }
                     break;
-                // Instantiate Slowing Totem
+                // Instantiate Healing Totem
                 case "2":
                     if (pointManager.points >= 100)
                     {
@@ -76,19 +76,19 @@ public class PlayerActions : MonoBehaviour
 
                     }
                     break;
-                // Instantiate Healing Totem
+                // Instantiate Slowing Totem
                 case "3":
                     if (pointManager.points >= 25)
                     {
                         pointManager.points -= 25;
-                        Instantiate(prefab[2], MousePos() + (Vector3.up * 0.6f), Quaternion.identity);
+                        Instantiate(prefab[2], MousePos() + (Vector3.down * 0.3f), Quaternion.identity);
                     }
                     break;
                 // Instantiate Poison Totem
                 case "4":
-                    if (pointManager.points >= 5)
+                    if (pointManager.points >= 150)
                     {
-                        pointManager.points -= 5;
+                        pointManager.points -= 150;
                         Instantiate(prefab[3], MousePos() + (Vector3.up * 0.6f), Quaternion.identity);
                     }
                     break;

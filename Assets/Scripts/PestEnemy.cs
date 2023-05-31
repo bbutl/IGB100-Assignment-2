@@ -17,6 +17,7 @@ public class PestEnemy : Health
     private float fixedRotation = 0f;
     Transform r;
     private bool treeContact = false;
+    private float tickTime = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +81,19 @@ public class PestEnemy : Health
             Destroy(collision.gameObject);
             TakeDamage(bulletDmg);
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Poison")
+        {
+            tickTime -= Time.deltaTime;
+            if(tickTime <= 0)
+            {
+                TakeDamage(25);
+                tickTime = 2f;
+            }
+        }
+        
     }
     IEnumerator AttackSpeed()
     {

@@ -1833,7 +1833,7 @@ GameObject:
   - component: {fileID: 3822765271655097046}
   m_Layer: 0
   m_Name: Ant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a270bd1fc9791f3448a780b1f4ea0f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antHill: {fileID: 0}
+  antHill: {fileID: 758865649691857799, guid: e28327ec3d37256418779a058e97f6f0, type: 3}
   i: 0
   waitTime: 0
 --- !u!114 &8493869114620834736
