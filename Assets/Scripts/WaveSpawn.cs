@@ -25,63 +25,68 @@ public class WaveSpawn : MonoBehaviour
     public List<GameObject> spawnedEnemies = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
-    { 
-        GenerateWave();
+    {
+        if (isActive == true)
+        {
+            GenerateWave();
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(currWave > waveMax)
+        if (isActive == true)
         {
-            currWave = 0;
-            SceneManager.LoadScene("Victory");
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
-        if (spawnTimer <= 0)
-        {
-            //spawn an enemy
-            if (enemiesToSpawn.Count > 0)
+            if (currWave > waveMax)
             {
-                GameObject enemy = (GameObject)Instantiate(enemiesToSpawn[0], spawnLocation[spawnIndex].position, Quaternion.identity); // Spawn first enemy 
-                enemiesToSpawn.RemoveAt(0); // and remove it
-                spawnedEnemies.Add(enemy);
-                spawnTimer = spawnInterval;
-
-                if (spawnIndex + 1 <= spawnLocation.Length - 1)
+                currWave = 0;
+                SceneManager.LoadScene("Victory");
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            if (spawnTimer <= 0)
+            {
+                //spawn an enemy
+                if (enemiesToSpawn.Count > 0)
                 {
-                    spawnIndex++;
+                    GameObject enemy = (GameObject)Instantiate(enemiesToSpawn[0], spawnLocation[spawnIndex].position, Quaternion.identity); // Spawn first enemy 
+                    enemiesToSpawn.RemoveAt(0); // and remove it
+                    spawnedEnemies.Add(enemy);
+                    spawnTimer = spawnInterval;
+
+                    if (spawnIndex + 1 <= spawnLocation.Length - 1)
+                    {
+                        spawnIndex++;
+                    }
+                    else
+                    {
+                        spawnIndex = 0;
+                    }
                 }
                 else
                 {
-                    spawnIndex = 0;
+                    waveTimer = 0; // if no enemies remain, end wave
                 }
             }
             else
             {
-                waveTimer = 0; // if no enemies remain, end wave
+                spawnTimer -= Time.fixedDeltaTime;
+                waveTimer -= Time.fixedDeltaTime;
             }
-        }
-        else
-        {
-            spawnTimer -= Time.fixedDeltaTime;
-            waveTimer -= Time.fixedDeltaTime;
-        }
 
-        if (waveTimer <= 0)
-        {
-            
-            
+            if (waveTimer <= 0)
+            {
+
+
                 currWave++;
                 GenerateWave();
-            
+
+
+
+
+            }
            
-               
-            
         }
-        Debug.Log("counting down" + waveTimer.ToString());
-        Debug.Log("from" + waveDuration.ToString());
     }
 
     public void GenerateWave()
