@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 8
   bulletDmg: 50
-  health: 350
+  health: 300
   maxHealth: 1500
   damage: 25
   enemyHealth: {fileID: 1926901498242503086}

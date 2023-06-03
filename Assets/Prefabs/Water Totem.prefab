@@ -42,14 +42,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981475822831968468}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c564d096a81afa9438bfaacb1e246da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   totemHealth: {fileID: 0}
   bonsaiHealth: {fileID: 2344875545325481030, guid: 81261663744d36445b2313a8be7b8989, type: 3}
-  waveSpawn: {fileID: 7898702267562098604, guid: 8755591f3180aae4b8972635432307c9, type: 3}
+  waveSpawn: {fileID: 168354228060859104, guid: 6f32aa21dbcd3ce43aebb24e6e75d2f4, type: 3}
   healingAmount: 50
   complete: 0
 --- !u!33 &1274903700928536226

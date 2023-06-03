@@ -6,6 +6,7 @@ public class Scenes : MonoBehaviour
 {
     public GameObject bonsai;
     public GameObject waveSpawn;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,4 +36,5 @@ public class Scenes : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
+    
 }

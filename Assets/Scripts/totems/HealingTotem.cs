@@ -7,7 +7,8 @@ public class HealingTotem : MonoBehaviour
     public Health totemHealth;
     public Health bonsaiHealth;
     public WaveSpawn waveSpawn;
-    public int healingAmount = 50;
+    public int healingAmount = 100;
+    public int healingMax = 1500;
     public bool complete = false;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class HealingTotem : MonoBehaviour
     void FixedUpdate()
     {
         // Once waveTimer reaches zero, heal the bonsai
-        if (waveSpawn.waveTimer < 1 && complete == false)
+        if (waveSpawn.waveTimer < 1 && complete == false && bonsaiHealth.health < healingMax)
         {
             StartCoroutine(Heal());
         }
@@ -29,7 +30,7 @@ public class HealingTotem : MonoBehaviour
     {
         complete = true;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(30);
         bonsaiHealth.health += healingAmount;
         complete = false;
 

@@ -19,8 +19,8 @@ public class WaveSpawn : MonoBehaviour
     public float waveTimer;
     private float spawnInterval;
     private float spawnTimer;
-
-    private int waveMax = 3;
+    
+    private int waveMax = 10;
 
     public List<GameObject> spawnedEnemies = new List<GameObject>();
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class WaveSpawn : MonoBehaviour
             if (currWave > waveMax)
             {
                 currWave = 0;
-                SceneManager.LoadScene("Victory");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
